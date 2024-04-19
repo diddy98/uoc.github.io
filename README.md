@@ -10,7 +10,7 @@ Las tres visualizaciones asignadas fueron:
 
 El cartograma fue realizado en el sitio web *Datawrapper* y representa un mapa de los Estados Unidos de América donde el tamaño de los estados depende de la población total, de acuerdo a la información recogida en el Censo realizado en 2020.
 
-El cartograma está disponible aquí:
+El cartograma está disponible aquí: https://www.datawrapper.de/_/kOrTM/
 
 **Dendograma lineal**
 
