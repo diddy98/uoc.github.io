@@ -31,3 +31,8 @@ beeswarm(Family ~ Region,
          cex.axis = 0.8,
          las = 1)
 
+# Guardar gráfico
+
+png(file = "./Output/plot_beeswarm.png", width = 800, height = 600)
+dev.off()
+
