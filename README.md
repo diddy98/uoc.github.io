@@ -6,6 +6,8 @@ Las tres visualizaciones asignadas fueron:
 * Dendograma lineal
 * Beeswarm chart
 
+La presentación utilizada en el video correspondiente se encuentra en el repositorio como pdf.
+
 **Cartograma**
 
 El cartograma fue realizado en el sitio web *Datawrapper* y representa un mapa de los Estados Unidos de América donde el tamaño de los estados depende de la población total, de acuerdo a la información recogida en el Censo realizado en 2020.
