@@ -1,19 +1,21 @@
 # Basado en: https://flowingdata.com/2016/09/08/beeswarm-plot-in-r-to-show-distributions/
 
+# Instalación y carga de librerías
 
-library(beeswarm)
+packages_required <- c("beeswarm")
 
-happiness_2015 <- read.csv("G:/Mi unidad/Semestre actual/Visualización de datos/PEC2/happiness_2015.csv")
+for (package in packages_required) {
+  if (!(package %in% installed.packages())) {
+    install.packages(package)}}    
 
-beeswarm(happiness_2015$Family)
+lapply(packages_required, library, character.only = TRUE)
 
-beeswarm(Family  ~ Region, data=happiness_2015, col=sample(colors(), 10), pch=10, method="swarm", cex=0.5, las=2, xlab="", cex.axis= 0.4)
+# Carga de datos
 
-par(las=1)
-beeswarm(Family  ~ Region, data=happiness_2015, col=sample(colors(), 10), pch=10, method="swarm", cex=0.5, horizontal=TRUE, xlab="PIB per capita", main="Distribución de PIB per capita, por región")
+happiness_2015 <- read.csv("./Datasets/happiness_2015.csv", 
+                           header=TRUE)
 
-
-# Versión final
+# Gráfico
 
 par(mar = c(1, 6, 1, 6) + 5)
 
