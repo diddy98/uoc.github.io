@@ -18,11 +18,11 @@ El cartograma está disponible aquí: https://www.datawrapper.de/_/kOrTM/
 
 El dendograma lineal fue realizado en R, a partir de un dataset disponible en Kaggle con información económica y social de los países. La idea es usar un agrupamiento jerárquico para, una vez creados los clusters, mostrar un dendograma.
 
-El script para realizar esto se encuentra en la carpeta de *Scripts* con el nombre de "clustering_R". El dataset se encuentra en la correspondiente carpeta (*Datasets*) con el nombre de "happiness_2015.csv".
+El script para realizar esto se encuentra en la carpeta de *Scripts* con el nombre de "clustering_script.R". El dataset se encuentra en la correspondiente carpeta (*Datasets*) con el nombre de "happiness_2015.csv".
 
 **Beeswarm chart**
 
 El *beeswarm chart* fue realizado en R, a partir del mismo dataset utilizado en el caso del dendograma lineal. La idea es mostrar la variable numérica de "GDP per capita" para cada región.
 
-El script para realizar esto se encuentra en la carpeta de *Scripts* con el nombre de "beeswarm_R". El dataset se encuentra en la correspondiente carpeta (*Datasets*) con el nombre de "happiness_2015.csv".
+El script para realizar esto se encuentra en la carpeta de *Scripts* con el nombre de "beeswarm_script.R". El dataset se encuentra en la correspondiente carpeta (*Datasets*) con el nombre de "happiness_2015.csv".
 
