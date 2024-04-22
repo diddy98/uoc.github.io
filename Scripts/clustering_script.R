@@ -36,3 +36,8 @@ dend %>%
  plot(horiz=TRUE, axes=FALSE)
 abline(v = 350, lty = 2)
 
+# Guardar gráfico
+
+png(file = "./Output/plot_dendogram.png", width = 800, height = 600)
+dev.off()
+
