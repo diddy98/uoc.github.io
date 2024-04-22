@@ -1,17 +1,25 @@
+# Basado on https://r-graph-gallery.com/340-custom-your-dendrogram-with-dendextend.html
 
-# Based on https://r-graph-gallery.com/340-custom-your-dendrogram-with-dendextend.html
+# Instalación y carga de librerías
 
-# Import data
+packages_required <- c("tidyverse", "dendextend")
 
-library(tidyverse)
-library(dendextend)
+for (package in packages_required) {
+  if (!(package %in% installed.packages())) {
+    install.packages(package)}}    
 
-happiness_2015 <- read.csv("G:/Mi unidad/Semestre actual/Visualización de datos/PEC2/happiness_2015.csv")
+lapply(packages_required, library, character.only = TRUE)
+
+# Carga de datos
+
+happiness_2015 <- read.csv("./Datasets/happiness_2015.csv", 
+                           header=TRUE)
 
 rownames(happiness_2015) <- happiness_2015$Country
 happiness_2015$Country <- NULL
 
-# Clusterisation
+# Agrupamiento y creación de objeto dend
+
 happiness_2015 %>% 
  filter(Region == "Western Europe") %>% 
  select(Economy..GDP.per.Capita., Family, Health..Life.Expectancy., Freedom, Trust..Government.Corruption.) %>% 
@@ -19,13 +27,8 @@ happiness_2015 %>%
  hclust() %>% 
  as.dendrogram() -> dend
 
-# Plot
-par(mar=c(7,3,1,1))  # Increase bottom margin to have the complete label
-plot(dend)
+# Creación de gráfico, color por número de clusters
 
-
-
-# Color in function of the cluster
 par(mar=c(1,1,1,7))
 dend %>%
  set("labels_col", value = c("skyblue", "orange"), k=2) %>%
